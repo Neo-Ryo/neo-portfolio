@@ -1,0 +1,139 @@
+.wrapperDark {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  background-color: #393939;
+  color: aliceblue;
+}
+
+.title {
+  grid-column: 6;
+  grid-row: 2;
+  font-size: 40px;
+}
+
+.button-wrapper {
+  border-radius: 100%;
+  border: 1px solid aliceblue;
+  background-color: inherit;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  box-shadow: 1px 1px 3px aliceblue;
+  animation: floatingUpDown 1.5s ease-in-out infinite;
+}
+
+.arrow {
+  border: solid aliceblue;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.button-bottom {
+  grid-column: 6 / 7;
+  grid-row: 8;
+}
+
+/* here are animations*/
+.fadeIn {
+  animation: fadeIn 1s ease-in;
+}
+
+.slideInDown {
+  animation: slideInDown 1s ease-in-out;
+}
+
+.slideOutDown {
+  animation: slideOutDown 1s ease-in-out;
+}
+
+.slideOutUp {
+  animation: slideOutUp 1s ease-in-out;
+}
+
+.slideInUp {
+  animation: slideInUp 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes slideOutDown {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes floatingUpDown {
+  0% {
+    box-shadow: 0 3px 8px 0px rgb(95, 95, 95);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 10px 10px 0px rgb(95, 95, 95);
+    transform: translatey(-10px);
+  }
+  100% {
+    box-shadow: 0 3px 8px 0px rgb(95, 95, 95);
+    transform: translatey(0px);
+  }
+}
