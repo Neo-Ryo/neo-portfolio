@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react';
 import '../global.css';
 import { SetMyRender } from '../../App';
+import Typist from 'react-typist';
 
 export default function Australia() {
   const { page, setPage, previousPage, setPreviousPage } = useContext(
@@ -25,9 +26,41 @@ export default function Australia() {
 
   return (
     <div className={`wrapperDark ${anime}`}>
-      <h1>Australia!</h1>
-      <button onClick={() => handleUnsubscibeNext()}>next</button>
-      <button onClick={() => handleUnsubscibeBack()}>back</button>
+      <h1 className='title-area'>Australia!</h1>
+      <code className='code code-area'>
+        <p className='data'>data: &#123; </p>
+        <p className='data-key'>
+          name: <span className='data-value'> "Marc"</span>
+        </p>
+        <p className='data-key'>
+          from: <span className='data-value'> "Lyon"</span>
+        </p>
+        <Typist>
+          <Typist.Delay ms={3500} />
+          <p className='data-key'>travels:</p>
+          <p className='data-key deep-one'>
+            &#123; place: <span className='data-value'> "Australia"</span>,
+            timeInYears: <span className='data-value-integer'> 2</span> &#125;
+          </p>
+          <p className='data-key'>
+            loves: <span className='data-value'> "Mangas"</span>
+          </p>
+        </Typist>
+
+        <p className='data'>&#125;</p>
+      </code>
+      <button
+        className='button-wrapper button-bottom'
+        onClick={() => handleUnsubscibeNext()}
+      >
+        <i className='arrow down'></i>
+      </button>
+      <button
+        className='button-wrapper button-top'
+        onClick={() => handleUnsubscibeBack()}
+      >
+        <i className='arrow up'></i>
+      </button>
     </div>
   );
 }
