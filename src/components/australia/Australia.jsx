@@ -35,15 +35,16 @@ export default function Australia() {
         <p className='data-key'>
           from: <span className='data-value'> "Lyon"</span>
         </p>
+        <p className='data-key'>
+          loves: &#91;{' '}
+          <span className='data-value'> "Mangas", "Video games"</span> &#93;
+        </p>
         <Typist>
           <Typist.Delay ms={3500} />
           <p className='data-key'>travels:</p>
           <p className='data-key deep-one'>
             &#123; place: <span className='data-value'> "Australia"</span>,
             timeInYears: <span className='data-value-integer'> 2</span> &#125;
-          </p>
-          <p className='data-key'>
-            loves: <span className='data-value'> "Mangas"</span>
           </p>
         </Typist>
 
