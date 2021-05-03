@@ -1,6 +1,8 @@
 import React, { createContext, useState } from 'react';
 import Intro from './components/intro/Intro';
 import Australia from './components/australia/Australia';
+import BackToLyon from './components/backToLyon/BackToLyon';
+import Biarritz from './components/biarritz/Biarritz';
 import './App.css';
 
 export const SetMyRender = createContext(0);
@@ -15,6 +17,10 @@ function App() {
         return <Intro />;
       case 1:
         return <Australia />;
+      case 2:
+        return <BackToLyon />;
+      case 3:
+        return <Biarritz />;
 
       default:
         break;

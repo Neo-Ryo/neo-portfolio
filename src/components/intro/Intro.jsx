@@ -16,26 +16,21 @@ export default function Intro() {
   );
 
   const handleUnsubscibe = () => {
+    setPreviousPage(0);
     setAnime('slideOutUp');
     setTimeout(() => {
       setPage(page + 1);
     }, 1000);
   };
 
-  useEffect(() => {
-    return () => {
-      setPreviousPage(0);
-    };
-  }, []);
-
   return (
     <div className={`wrapperDark ${anime}`}>
       <h1 className='title title-area'>Who am I?</h1>
-      <figure className='picture-area'>
+      <figure className='avatar-area'>
         <img
           onMouseEnter={() => setAvatar(ss2)}
           onMouseLeave={() => setAvatar(myAvatar)}
-          id='picture-style'
+          id='avatar-style'
           src={avatar}
           alt='L from death note'
         />
@@ -43,7 +38,7 @@ export default function Intro() {
       </figure>
       <p className='main-text main-text-area'>
         Well, my name is Marc, I grew up in Lyon and I use to spend all of my
-        spare time drawing mangas characters and playing video games. I wasn't
+        spare time drawing manga characters and playing video games. I wasn't
         much of a scholar person and when I turned 22 I decided to go to.....
       </p>
       <code className='code code-area'>
