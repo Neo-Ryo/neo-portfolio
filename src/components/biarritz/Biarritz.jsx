@@ -44,7 +44,7 @@ export default function Biarritz() {
         />
         <figcaption>
           Alright... this is me now. Got ya! This is the legendary Neo from the
-          movie Matrix ^^ did you recognize him?
+          movie Matrix ^^ did you recognize him? &#128526;
         </figcaption>
       </figure>
       <img
@@ -94,7 +94,11 @@ export default function Biarritz() {
             <span className='data-value'> "Bask country", "Landes"</span>&#93;
           </p>
           <p className='data-key'>
-            humor: <span className='data-value'> "Coudn't get any worst"</span>
+            humor:{' '}
+            <span className='data-value'>
+              {' '}
+              "Coudn't get any worst &#128517;"
+            </span>
           </p>
         </Typist>
         <p className='data'>&#125;</p>

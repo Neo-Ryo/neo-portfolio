@@ -4,6 +4,7 @@ import Australia from './components/australia/Australia';
 import BackToLyon from './components/backToLyon/BackToLyon';
 import Biarritz from './components/biarritz/Biarritz';
 import Dev from './components/developper/Dev';
+import Projects from './components/projects/Projects';
 import './App.css';
 
 export const SetMyRender = createContext(0);
@@ -24,6 +25,8 @@ function App() {
         return <Biarritz />;
       case 4:
         return <Dev />;
+      case 5:
+        return <Projects />;
 
       default:
         break;
