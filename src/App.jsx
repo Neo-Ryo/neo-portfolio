@@ -3,6 +3,7 @@ import Intro from './components/intro/Intro';
 import Australia from './components/australia/Australia';
 import BackToLyon from './components/backToLyon/BackToLyon';
 import Biarritz from './components/biarritz/Biarritz';
+import Dev from './components/developper/Dev';
 import './App.css';
 
 export const SetMyRender = createContext(0);
@@ -21,6 +22,8 @@ function App() {
         return <BackToLyon />;
       case 3:
         return <Biarritz />;
+      case 4:
+        return <Dev />;
 
       default:
         break;
