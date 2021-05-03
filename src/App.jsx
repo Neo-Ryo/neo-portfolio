@@ -10,7 +10,7 @@ import './App.css';
 export const SetMyRender = createContext(0);
 
 function App() {
-  const [page, setPage] = useState(4);
+  const [page, setPage] = useState(0);
   const [previousPage, setPreviousPage] = useState(0);
 
   const switchRendering = (key) => {
