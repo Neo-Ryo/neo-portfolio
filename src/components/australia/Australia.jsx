@@ -32,9 +32,9 @@ export default function Australia() {
   return (
     <div className={`wrapper-ozzie ${anime}`}>
       <h1 className='title-area'>Australia!</h1>
-      <figure className='avatar-area'>
+      <div className='avatar-area'>
         <img id='avatar-style' src={avatar} alt='L from death note' />
-        <figcaption>
+        <p>
           Ok ok, you got me, this isn't me but a very famous manga character,
           can you gess who is he{' '}
           <button
@@ -46,8 +46,8 @@ export default function Australia() {
           <span className={toggleAnswer ? 'answer-show' : 'answer-hide'}>
             He is L, the best detective ever (equal with Sherlock Holmes)
           </span>
-        </figcaption>
-      </figure>
+        </p>
+      </div>
       <img src={ozzie} alt='austalian floating flag' className='ozzie-flag' />
       <p className='main-text main-text-area'>
         Yeah, been in australia! One of the greatest time of my life, met so

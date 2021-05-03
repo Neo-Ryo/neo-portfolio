@@ -26,7 +26,7 @@ export default function Intro() {
   return (
     <div className={`wrapperDark ${anime}`}>
       <h1 className='title title-area'>Who am I?</h1>
-      <figure className='avatar-area'>
+      <div className='avatar-area'>
         <img
           onMouseEnter={() => setAvatar(ss2)}
           onMouseLeave={() => setAvatar(myAvatar)}
@@ -34,8 +34,8 @@ export default function Intro() {
           src={avatar}
           alt='L from death note'
         />
-        <figcaption>yes, this is a picture of me...</figcaption>
-      </figure>
+        <p>yes, this is a picture of me...</p>
+      </div>
       <p className='main-text main-text-area'>
         Well, my name is Marc, I grew up in Lyon and I use to spend all of my
         spare time drawing manga characters and playing video games. I wasn't

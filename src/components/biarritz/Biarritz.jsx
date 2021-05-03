@@ -34,7 +34,7 @@ export default function Biarritz() {
   return (
     <div className={`wrapper-biarritz ${anime}`}>
       <h1 className='title-area'>Biarritz!</h1>
-      <figure className='avatar-area'>
+      <div className='avatar-area'>
         <img
           onMouseEnter={() => setAvatar(keanuBruce)}
           onMouseLeave={() => setAvatar(myAvatar)}
@@ -42,11 +42,11 @@ export default function Biarritz() {
           src={avatar}
           alt='keanu reeves'
         />
-        <figcaption>
+        <p>
           Alright... this is me now. Got ya! This is the legendary Neo from the
           movie Matrix ^^ did you recognize him? &#128526;
-        </figcaption>
-      </figure>
+        </p>
+      </div>
       <img
         src={baskCross}
         alt='bask cross'
