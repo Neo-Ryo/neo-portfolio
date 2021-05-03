@@ -34,7 +34,7 @@ export default function Dev() {
       <figure className='avatar-area'>
         <img id='avatar-style' src={avatar} alt='keanu reeves' />
         <figcaption>
-          This is me for real now, thanks for your patience
+          This is me for real now, thanks for your patience &#128523;
         </figcaption>
       </figure>
       <p className='main-text main-text-area'>
@@ -57,8 +57,10 @@ export default function Dev() {
         <p className='data-key'>
           loves: &#91;{' '}
           <span className='data-value'>
-            {' '}
             "Mangas", "Video games", "surf", "movies"
+            <Typist>
+              <Typist.Delay ms={3500} />, "computing sciences"
+            </Typist>
           </span>{' '}
           &#93;
         </p>
@@ -72,12 +74,13 @@ export default function Dev() {
           <span className='data-value'> "Bask country", "Landes"</span>&#93;
         </p>
         <p className='data-key'>
-          humor: <span className='data-value'> "Coudn't get any worst"</span>
+          humor:{' '}
+          <span className='data-value'> "Coudn't get any worst &#128517;"</span>
         </p>
         <Typist>
-          <Typist.Delay ms={3500} />
+          <Typist.Delay ms={5500} />
           <p className='data-key'>
-            job: <span className='data-value'> "Web developper"</span>
+            job: <span className='data-value'> "Web developper 🔥"</span>
           </p>
           <p className='data-key'>
             isComplete: <span className='data-value-bool'> true</span>

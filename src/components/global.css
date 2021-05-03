@@ -1,5 +1,5 @@
 :root {
-  --main-bg: #393939;
+  --main-bg: #303030;
   --matrix-green-primary: #22b455;
   --matrix-green-secondary: #80ce87;
   --matrix-green-dark: #204829;
@@ -202,7 +202,7 @@
   grid-column-start: 9;
   grid-column-end: 12;
   grid-row-start: 5;
-  grid-row-end: 12;
+  grid-row-end: 10;
   text-align: left;
   /* line-height: 1px;     --in case it gets too big */
 }
