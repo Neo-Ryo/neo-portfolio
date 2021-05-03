@@ -2,6 +2,8 @@ import React, { useContext, useState, useEffect } from 'react';
 import '../global.css';
 import { SetMyRender } from '../../App';
 import avatar from '../../img/me-cartoonized1.png';
+import projectsIcon from '../../img/creationLogoWhite.png';
+import emailIcon from '../../img/emailWhite.png';
 import Typist from 'react-typist';
 
 export default function Dev() {
@@ -9,7 +11,7 @@ export default function Dev() {
     SetMyRender
   );
   const [anime, setAnime] = useState(
-    previousPage > 4 ? 'slideInDown' : 'slideInUp'
+    previousPage === 5 ? 'slideInLeft' : 'slideInUp'
   );
   const [toggleAnswer, setToggleAnswer] = useState(false);
 
@@ -20,13 +22,13 @@ export default function Dev() {
       setPage(page - 1);
     }, 1000);
   };
-  //   const handleUnsubscibeNext = () => {
-  //     setPreviousPage(3);
-  //     setAnime('slideOutUp');
-  //     setTimeout(() => {
-  //       setPage(page + 1);
-  //     }, 1000);
-  //   };
+  const handleUnsubscibeNext = () => {
+    setPreviousPage(4);
+    setAnime('slideOutLeft');
+    setTimeout(() => {
+      setPage(page + 1);
+    }, 1000);
+  };
 
   return (
     <div className={`wrapper-dev ${anime}`}>
@@ -54,16 +56,16 @@ export default function Dev() {
         <p className='data-key'>
           from: <span className='data-value'> "Lyon"</span>
         </p>
-        <p className='data-key'>
-          loves: &#91;{' '}
-          <span className='data-value'>
-            "Mangas", "Video games", "surf", "movies"
-            <Typist>
-              <Typist.Delay ms={3500} />, "computing sciences"
-            </Typist>
-          </span>{' '}
-          &#93;
-        </p>
+        <Typist>
+          <Typist.Delay ms={2500} />
+          <p className='data-key'>
+            loves: &#91;{' '}
+            <span className='data-value'>
+              "Mangas", "Video games", "surf", "movies" , "computing sciences"
+            </span>{' '}
+            &#93;
+          </p>
+        </Typist>
         <p className='data-key'>travels:</p>
         <p className='data-key deep-one'>
           &#123; place: <span className='data-value'> "Australia"</span>,
@@ -78,7 +80,7 @@ export default function Dev() {
           <span className='data-value'> "Coudn't get any worst &#128517;"</span>
         </p>
         <Typist>
-          <Typist.Delay ms={5500} />
+          <Typist.Delay ms={7500} />
           <p className='data-key'>
             job: <span className='data-value'> "Web developper 🔥"</span>
           </p>
@@ -99,11 +101,18 @@ export default function Dev() {
         <i className='arrow up'></i>
       </button>
       {/* <button
-        className='button-wrapper button-bottom'
+        className='button-wrapper-classic projects-button'
         onClick={() => handleUnsubscibeNext()}
       >
-        <i className='arrow down'></i>
+        <img src={projectsIcon} alt='projects' width='200' />
       </button> */}
+      <a
+        href='mailto:marco.sch4064@gmail.com'
+        className='button-wrapper-classic email-button'
+        // onClick={() => handleUnsubscibeNext()}
+      >
+        <img src={emailIcon} alt='projects' width='200' />
+      </a>
     </div>
   );
 }
