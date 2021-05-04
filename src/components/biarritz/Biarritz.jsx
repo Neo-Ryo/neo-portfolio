@@ -3,7 +3,7 @@ import '../global.css';
 import { SetMyRender } from '../../App';
 import myAvatar from '../../img/keanu.jpg';
 import keanuBruce from '../../img/keanu-bruce.gif';
-import baskCross from '../../img/croixbasqueblanche.png';
+import baskCross from '../../img/croix_basque_rouge.png';
 import Typist from 'react-typist';
 
 export default function Biarritz() {

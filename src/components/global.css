@@ -56,6 +56,16 @@
   color: aliceblue;
 }
 
+.wrapper-projects {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  background-color: var(--main-bg);
+  color: aliceblue;
+}
+
 .title {
   white-space: nowrap;
 }
@@ -147,6 +157,7 @@
 .data-value-integer {
   color: crimson;
 }
+
 .data-value-bool {
   color: var(--matrix-green-primary);
 }
@@ -161,6 +172,13 @@
 
 .email-icon {
   width: 200px;
+}
+
+.projects-display {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
 }
 
 /* grid area classes */
@@ -187,6 +205,14 @@
   grid-row: 2;
   font-size: 40px;
   justify-self: center;
+}
+
+.title-area-project {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row: 1;
+  font-size: 40px;
+  text-align: center;
 }
 
 .sub-title-area {
@@ -240,7 +266,7 @@
 
 .button-left {
   grid-column: 1;
-  grid-row: 6;
+  grid-row: 4;
 }
 
 .projects-button {
@@ -250,6 +276,11 @@
 .email-button {
   grid-column: 6;
   grid-row: 9;
+}
+
+.projects-area {
+  grid-column: 4 / 10;
+  grid-row: 2 / 12;
 }
 
 /* media queries */
