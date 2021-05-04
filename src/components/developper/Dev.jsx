@@ -11,7 +11,11 @@ export default function Dev() {
     SetMyRender
   );
   const [anime, setAnime] = useState(
-    previousPage === 5 ? 'slideInLeft' : 'slideInUp'
+    previousPage === 5
+      ? 'slideInLeft'
+      : previousPage === 6
+      ? 'slideInRight'
+      : 'slideInUp'
   );
   const [toggleAnswer, setToggleAnswer] = useState(false);
 
@@ -22,11 +26,19 @@ export default function Dev() {
       setPage(page - 1);
     }, 1000);
   };
-  const handleUnsubscibeNext = () => {
+  const handleUnsubscibeProject = () => {
     setPreviousPage(4);
     setAnime('slideOutLeft');
     setTimeout(() => {
       setPage(page + 1);
+    }, 1000);
+  };
+
+  const handleUnsubscibeEmail = () => {
+    setPreviousPage(4);
+    setAnime('slideOutRight');
+    setTimeout(() => {
+      setPage(page + 2);
     }, 1000);
   };
 
@@ -96,18 +108,24 @@ export default function Dev() {
         <i className='arrow up'></i>
       </button>
       <button
+        className='button-wrapper-classic email-button'
+        onClick={() => handleUnsubscibeEmail()}
+      >
+        <img src={emailIcon} alt='projects' className='email-icon' />
+      </button>
+      <button
         className='button-wrapper-classic projects-button'
-        onClick={() => handleUnsubscibeNext()}
+        onClick={() => handleUnsubscibeProject()}
       >
         <img src={projectsIcon} alt='projects' className='email-icon' />
       </button>
-      <a
+      {/* <a
         href='mailto:marco.sch4064@gmail.com'
         className='button-wrapper-classic email-button'
-        // onClick={() => handleUnsubscibeNext()}
+        
       >
         <img src={emailIcon} alt='projects' className='email-icon' />
-      </a>
+      </a> */}
     </div>
   );
 }

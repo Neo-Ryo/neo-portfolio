@@ -5,12 +5,13 @@ import BackToLyon from './components/backToLyon/BackToLyon';
 import Biarritz from './components/biarritz/Biarritz';
 import Dev from './components/developper/Dev';
 import Projects from './components/projects/Projects';
+import Contact from './components/contact/Contact';
 import './App.css';
 
 export const SetMyRender = createContext(0);
 
 function App() {
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(6);
   const [previousPage, setPreviousPage] = useState(0);
 
   const switchRendering = (key) => {
@@ -27,6 +28,8 @@ function App() {
         return <Dev />;
       case 5:
         return <Projects />;
+      case 6:
+        return <Contact />;
 
       default:
         break;
