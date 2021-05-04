@@ -107,25 +107,24 @@ export default function Dev() {
       >
         <i className='arrow up'></i>
       </button>
-      <button
+      {/* <button
         className='button-wrapper-classic email-button'
         onClick={() => handleUnsubscibeEmail()}
       >
         <img src={emailIcon} alt='projects' className='email-icon' />
-      </button>
+      </button> */}
       <button
         className='button-wrapper-classic projects-button'
         onClick={() => handleUnsubscibeProject()}
       >
         <img src={projectsIcon} alt='projects' className='email-icon' />
       </button>
-      {/* <a
+      <a
         href='mailto:marco.sch4064@gmail.com'
         className='button-wrapper-classic email-button'
-        
       >
         <img src={emailIcon} alt='projects' className='email-icon' />
-      </a> */}
+      </a>
     </div>
   );
 }
