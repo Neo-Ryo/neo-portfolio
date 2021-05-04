@@ -40,7 +40,7 @@ export default function Projects() {
       isDeployed: false,
     },
     {
-      id: 1,
+      id: 3,
       title: 'The Switcher',
       picture:
         'https://ryo-switcher.netlify.app/static/media/pixel-background-gif-9.dbd8227f.gif',

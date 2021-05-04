@@ -46,4 +46,11 @@
 
 .disabled {
   color: rgba(179, 4, 39, 0.753);
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    width: 80vw;
+  }
 }

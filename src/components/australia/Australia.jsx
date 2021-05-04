@@ -50,7 +50,7 @@ export default function Australia() {
       </div>
       <img src={ozzie} alt='austalian floating flag' className='ozzie-flag' />
       <p className='main-text main-text-area'>
-        Yeah, been in australia! One of the greatest time of my life, met so
+        Yeah, been in Australia! One of the greatest time of my life, met so
         many amazing people, seen so many places, learned and loved english,
         surf and culture. Well great time, but came a moment where I had to come
         back... And guess what?
