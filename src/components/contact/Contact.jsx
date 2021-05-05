@@ -1,4 +1,5 @@
 import React, { useContext, useState } from 'react';
+import Axios from 'axios';
 import '../global.css';
 
 import { SetMyRender } from '../../App';
@@ -8,7 +9,12 @@ export default function Contact() {
     SetMyRender
   );
   const [anime, setAnime] = useState('slideInLeft');
-
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [emailSent, setEmailSent] = useState(false);
+  const [emailStatusMessage, setEmailStatusMessage] = useState('');
+  const [error, setError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const handleUnsubscibe = () => {
     setPreviousPage(6);
     setAnime('slideOutLeft');
@@ -17,35 +23,66 @@ export default function Contact() {
     }, 1000);
   };
 
+  const handleChangeEmail = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleChangeMessage = (e) => {
+    setMessage(e.target.value);
+  };
+
+  const handleSubmitDatas = async (e) => {
+    e.preventDefault();
+    try {
+      const emailRes = await Axios.post('http://localhost:8000/email', {
+        email,
+        message,
+      });
+      // console.log('MY EMAIL RES: ', emailRes);
+      setError(false);
+      setEmailSent(true);
+      setEmailStatusMessage(emailRes.data.message);
+    } catch (error) {
+      setEmailSent(false);
+      setError(true);
+      setErrorMessage(error.response.data.message);
+    }
+  };
+
   return (
     <div className={`wrapperDark ${anime}`}>
       <form className='formulaire formulaire-area'>
         <h1 className='title-form'>Contact</h1>
-        {/* <label className='label-email' htmlFor='email'>
-          email
-        </label> */}
         <input
           className='input-email'
           name='email'
           type='email'
+          value={email}
+          required
+          onChange={handleChangeEmail}
           placeholder='exemple@email.com'
         />
-        {/* <label className='label-message' htmlFor='message'>
-          your message
-        </label> */}
         <textarea
           className='input-message'
           type='text'
           name='message'
+          required
+          value={message}
+          onChange={handleChangeMessage}
           placeholder='type your message here...'
         />
-        <button className='button-submit-email'>compute</button>
+        {error && <p className='email-error'>{errorMessage}</p>}
+        {emailSent && <p className='email-sent'>{emailStatusMessage}</p>}
+        <button
+          type='submit'
+          className='button-submit-email'
+          onClick={handleSubmitDatas}
+        >
+          compute
+        </button>
       </form>
-
-      <button
-        className='button-wrapper button-right'
-        onClick={() => handleUnsubscibe()}
-      >
+      <button className=' button-form-back' onClick={() => handleUnsubscibe()}>
+        Back
         <i className='arrow right'></i>
       </button>
     </div>
