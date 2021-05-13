@@ -4,9 +4,8 @@ import { SetMyRender } from '../../App';
 import ProjectCard from './ProjectCard';
 
 export default function Projects() {
-  const { page, setPage, previousPage, setPreviousPage } = useContext(
-    SetMyRender
-  );
+  const { page, setPage, previousPage, setPreviousPage } =
+    useContext(SetMyRender);
 
   const [anime, setAnime] = useState('slideInRight');
 
@@ -33,11 +32,11 @@ export default function Projects() {
       id: 2,
       title: 'Virus Clicker',
       picture:
-        'https://neoryo-portfolio.netlify.app/static/media/virus-2-bckgrd.03f8ce54.jpg',
+        'https://images.unsplash.com/photo-1584118624012-df056829fbd0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80',
       description:
         "This is one of my favorite, because I made it with fantastic people (Marion, Christelle and Charly), but also because it's a game!",
-      link: 'https://pokedex-ryo.netlify.app/',
-      isDeployed: false,
+      link: 'https://virus-clicker.netlify.app/game',
+      isDeployed: true,
     },
     {
       id: 3,
