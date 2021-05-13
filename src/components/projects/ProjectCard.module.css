@@ -6,6 +6,8 @@
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(
     to right,
     var(--matrix-green-dark),
@@ -38,10 +40,18 @@
   font-weight: 300;
 }
 
-.link {
+.linkButton {
   color: #bdca03;
+  background-color: inherit;
+  border: 1px solid #bdca03;
+  cursor: pointer;
   text-decoration: none;
   white-space: nowrap;
+  margin: 10px;
+}
+
+.link:visited {
+  color: #22b455;
 }
 
 .disabled {
@@ -52,5 +62,9 @@
 @media screen and (max-width: 450px) {
   .wrapper {
     width: 80vw;
+  }
+
+  .link {
+    font-size: small;
   }
 }

@@ -15,9 +15,16 @@ export default function ProjectCard({
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.description}>{description}</p>
         {isDeployed ? (
-          <a className={styles.link} href={link} rel='external' target='_blank'>
-            {link}
-          </a>
+          <button className={styles.linkButton}>
+            <a
+              className={styles.link}
+              href={link}
+              rel='external'
+              target='_blank'
+            >
+              {link}
+            </a>
+          </button>
         ) : (
           <p className={styles.disabled}>
             this project is currently disabled...

@@ -22,7 +22,7 @@ export default function Projects() {
       id: 1,
       title: 'Pokedex',
       picture:
-        'https://pokedex-ryo.netlify.app/static/media/pikachi-wallp.ba8bdbe0.jpg',
+        'https://images.unsplash.com/photo-1605979257913-1704eb7b6246?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
       description:
         'Created a pokedex using React, bootstrap, axios and the pokeAPI while I was at school to test out my skills',
       link: 'https://pokedex-ryo.netlify.app/',
@@ -32,7 +32,7 @@ export default function Projects() {
       id: 2,
       title: 'Virus Clicker',
       picture:
-        'https://images.unsplash.com/photo-1584118624012-df056829fbd0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1489&q=80',
+        'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2089&q=80',
       description:
         "This is one of my favorite, because I made it with fantastic people (Marion, Christelle and Charly), but also because it's a game!",
       link: 'https://virus-clicker.netlify.app/game',

@@ -7,9 +7,8 @@ import emailIcon from '../../img/emailWhite.png';
 import Typist from 'react-typist';
 
 export default function Dev() {
-  const { page, setPage, previousPage, setPreviousPage } = useContext(
-    SetMyRender
-  );
+  const { page, setPage, previousPage, setPreviousPage } =
+    useContext(SetMyRender);
   const [anime, setAnime] = useState(
     previousPage === 5
       ? 'slideInLeft'
@@ -111,13 +110,15 @@ export default function Dev() {
         className='button-wrapper-classic email-button'
         onClick={() => handleUnsubscibeEmail()}
       >
-        <img src={emailIcon} alt='projects' className='email-icon' />
+        Contact me!
+        {/* <img src={emailIcon} alt='projects' className='email-icon' /> */}
       </button>
       <button
         className='button-wrapper-classic projects-button'
         onClick={() => handleUnsubscibeProject()}
       >
-        <img src={projectsIcon} alt='projects' className='email-icon' />
+        See my projects!
+        {/* <img src={projectsIcon} alt='projects' className='email-icon' /> */}
       </button>
       {/* <a
         href='mailto:marco.sch4064@gmail.com'
