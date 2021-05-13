@@ -184,6 +184,7 @@
 .formulaire {
   display: grid;
   grid-template-rows: repeat(8, 1fr);
+  gap: 10px;
   border: 1px solid var(--matrix-green-secondary);
   padding: 20px;
 }
@@ -202,28 +203,41 @@
   border: 1px solid var(--matrix-green-primary);
   font-family: 'Press Start 2P', cursive;
   color: var(--matrix-green-primary);
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .input-message {
-  grid-row: 5 / 7;
+  grid-row: 4 / 6;
   width: 80%;
   padding: 10px;
   justify-self: center;
   background-color: #202020;
   border: 1px solid var(--matrix-green-primary);
   font-family: 'Press Start 2P', cursive;
-  font-size: 12px;
+  font-size: 10px;
   color: var(--matrix-green-primary);
 }
 
+.email-error {
+  color: red;
+  font-size: small;
+  grid-row: 6;
+}
+
+.email-sent {
+  color: var(--matrix-green-secondary);
+  font-size: small;
+  grid-row: 6;
+}
+
 .button-submit-email {
-  grid-row: 8;
+  grid-row: 7;
   width: 200px;
   justify-self: center;
   background-color: inherit;
   border: 1px solid var(--matrix-green-primary);
   color: var(--matrix-green-primary);
+  cursor: pointer;
 }
 
 /* grid area classes */
@@ -338,6 +352,17 @@
   grid-column: 5 / 9;
 }
 
+.button-form-back {
+  width: 200px;
+  background-color: inherit;
+  border: 1px solid var(--matrix-green-primary);
+  color: var(--matrix-green-primary);
+  grid-row: 1;
+  margin: 10px;
+  grid-column: 6;
+  cursor: pointer;
+}
+
 /* media queries */
 
 @media screen and (max-width: 1024px) {
@@ -363,10 +388,10 @@
   .projects-display {
     grid-template-columns: repeat(2, 1fr);
   }
-  /* .projects-area {
-    grid-column: 4 / 10;
-    grid-row: 2 / 12;
-  } */
+  .formulaire-area {
+    grid-row: 3 / 11;
+    grid-column: 3 / 11;
+  }
 }
 
 @media screen and (max-width: 450px) {
