@@ -5,9 +5,8 @@ import '../global.css';
 import { SetMyRender } from '../../App';
 
 export default function Contact() {
-  const { page, setPage, previousPage, setPreviousPage } = useContext(
-    SetMyRender
-  );
+  const { page, setPage, previousPage, setPreviousPage } =
+    useContext(SetMyRender);
   const [anime, setAnime] = useState('slideInLeft');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -34,10 +33,13 @@ export default function Contact() {
   const handleSubmitDatas = async (e) => {
     e.preventDefault();
     try {
-      const emailRes = await Axios.post('http://localhost:8000/email', {
-        email,
-        message,
-      });
+      const emailRes = await Axios.post(
+        'https://email-handler-nodejs.herokuapp.com/email',
+        {
+          email,
+          message,
+        }
+      );
       // console.log('MY EMAIL RES: ', emailRes);
       setError(false);
       setEmailSent(true);
