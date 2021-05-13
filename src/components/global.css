@@ -519,6 +519,16 @@
     grid-column: 3;
     width: 100%;
   }
+
+  .formulaire-area {
+    grid-row: 2 / 9;
+    grid-column: 1 / 4;
+  }
+
+  .button-form-back {
+    grid-row: 1;
+    grid-column: 2;
+  }
 }
 
 /* here are animations*/
