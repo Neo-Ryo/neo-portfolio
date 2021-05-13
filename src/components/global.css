@@ -88,10 +88,8 @@
 }
 
 .button-wrapper-classic {
-  border: none;
+  border: 1px solid var(--matrix-green-primary);
   background-color: inherit;
-  width: 50px;
-  height: 50px;
   margin: auto;
   cursor: pointer;
 }
@@ -170,9 +168,9 @@
   color: #df00ab;
 }
 
-.email-icon {
-  width: 200px;
-}
+/* .email-icon {
+  width: inherit;
+} */
 
 .projects-display {
   display: grid;
@@ -332,14 +330,28 @@
   grid-column: 12;
   grid-row: 6;
 }
+.email-button {
+  grid-column: 6;
+  grid-row: 12;
+  color: var(--matrix-green-secondary);
+  white-space: nowrap;
+}
+
+.email-button:hover {
+  background-color: var(--matrix-green-primary);
+  color: var(--main-bg);
+}
 
 .projects-button {
-  grid-column: 6;
-  grid-row: 9;
+  grid-column: 7;
+  grid-row: 12;
+  color: var(--matrix-green-secondary);
+  white-space: nowrap;
 }
-.email-button {
-  grid-column: 5;
-  grid-row: 9;
+
+.projects-button:hover {
+  background-color: var(--matrix-green-primary);
+  color: var(--main-bg);
 }
 
 .projects-area {
@@ -504,20 +516,35 @@
     grid-row: 12;
   }
 
+  .button-wrapper-classic {
+    width: 35px;
+    height: 35px;
+  }
+
   .email-button {
-    grid-row: 11;
+    grid-row: 12;
     grid-column: 1;
     width: 100%;
   }
 
-  .email-icon {
+  /* .email-icon {
+    width: 60%;
+  } */
+
+  .projects-button {
+    grid-row: 12;
+    grid-column: 3;
     width: 100%;
   }
 
-  .projects-button {
-    grid-row: 11;
-    grid-column: 3;
-    width: 100%;
+  .formulaire-area {
+    grid-row: 2 / 9;
+    grid-column: 1 / 4;
+  }
+
+  .button-form-back {
+    grid-row: 1;
+    grid-column: 2;
   }
 }
 

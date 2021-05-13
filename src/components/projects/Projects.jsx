@@ -4,9 +4,8 @@ import { SetMyRender } from '../../App';
 import ProjectCard from './ProjectCard';
 
 export default function Projects() {
-  const { page, setPage, previousPage, setPreviousPage } = useContext(
-    SetMyRender
-  );
+  const { page, setPage, previousPage, setPreviousPage } =
+    useContext(SetMyRender);
 
   const [anime, setAnime] = useState('slideInRight');
 
@@ -23,7 +22,7 @@ export default function Projects() {
       id: 1,
       title: 'Pokedex',
       picture:
-        'https://pokedex-ryo.netlify.app/static/media/pikachi-wallp.ba8bdbe0.jpg',
+        'https://images.unsplash.com/photo-1605979257913-1704eb7b6246?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
       description:
         'Created a pokedex using React, bootstrap, axios and the pokeAPI while I was at school to test out my skills',
       link: 'https://pokedex-ryo.netlify.app/',
@@ -33,11 +32,11 @@ export default function Projects() {
       id: 2,
       title: 'Virus Clicker',
       picture:
-        'https://neoryo-portfolio.netlify.app/static/media/virus-2-bckgrd.03f8ce54.jpg',
+        'https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2089&q=80',
       description:
         "This is one of my favorite, because I made it with fantastic people (Marion, Christelle and Charly), but also because it's a game!",
-      link: 'https://pokedex-ryo.netlify.app/',
-      isDeployed: false,
+      link: 'https://virus-clicker.netlify.app/game',
+      isDeployed: true,
     },
     {
       id: 3,
