@@ -101,7 +101,7 @@ export default function Contact() {
           className={`button-submit-email ${isLoading ? 'email-loading' : ''}`}
           onClick={handleSubmitDatas}
         >
-          {isLoading ? '' : emailSent ? 'Thank you' : 'compute'}
+          {isLoading ? '' : emailSent ? 'Thank you!' : 'compute'}
         </button>
       </form>
       <button className='button-form-back' onClick={() => handleUnsubscibe()}>
