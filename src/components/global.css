@@ -192,6 +192,19 @@
 }
 
 .input-email {
+  grid-row: 2;
+  width: 80%;
+  height: 70%;
+  padding: 0 10px;
+  justify-self: center;
+  background-color: #202020;
+  border: 1px solid var(--matrix-green-primary);
+  font-family: 'Press Start 2P', cursive;
+  color: var(--matrix-green-primary);
+  font-size: 12px;
+}
+
+.input-subject {
   grid-row: 3;
   width: 80%;
   height: 70%;
@@ -235,7 +248,29 @@
   background-color: inherit;
   border: 1px solid var(--matrix-green-primary);
   color: var(--matrix-green-primary);
-  cursor: pointer;
+  padding: 0;
+}
+
+.email-loading::before {
+  content: '';
+  display: block;
+  background: linear-gradient(
+    to left,
+    rgb(34, 180, 85) 13%,
+    rgb(34, 180, 85, 0.66) 66%,
+    rgb(34, 180, 85, 0.33)
+  );
+  height: 100%;
+  width: 30px;
+  margin: 0;
+  animation: scanning 1.7s infinite ease-in-out;
+}
+
+@keyframes scanning {
+  100% {
+    transform: translateX(170px);
+    opacity: 0;
+  }
 }
 
 /* grid area classes */
@@ -538,7 +573,7 @@
   }
 
   .formulaire-area {
-    grid-row: 2 / 9;
+    grid-row: 2 / 8;
     grid-column: 1 / 4;
   }
 
